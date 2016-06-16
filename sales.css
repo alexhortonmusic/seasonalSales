@@ -1,0 +1,39 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Tacoma', sans-serif;
+}
+
+h2 {
+	color: red;
+	margin-left: 130px;
+}
+
+
+h4 {
+	color: green;
+	margin: 0 0 10px 20px;
+}
+
+.products {
+	border: 1px solid black;
+	width: 200px;
+
+}
+
+/*.oldPrice {
+	text-decoration: line-through;
+	color: red;
+}*/
+
+.apparel {
+	background: grey;
+}
+
+.furniture {
+	background: yellow;
+}
+
+.household {
+	background: lightblue;
+}
