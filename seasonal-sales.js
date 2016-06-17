@@ -43,7 +43,7 @@ function productsToDOM (productsJSON) {
 			apparel.innerHTML += `
 				<div class="products">
 					<h3>${productName}</h3>
-					<h4 id="winterDiscount--${productID}">${productPrice}</h4>
+					<h4 id="winter--${productID}">${productPrice}</h4>
 				</div>
 			`;
 		} else if (productDepartment === 2) {
@@ -52,7 +52,7 @@ function productsToDOM (productsJSON) {
 			furniture.innerHTML += `
 				<div class="products">
 					<h3>${productName}</h3>
-					<h4 id="autumnDiscount--${productID}">${productPrice}</h4>
+					<h4 id="autumn--${productID}">${productPrice}</h4>
 				</div>
 			`; 
 		} else if (productDepartment === 3) {
@@ -61,7 +61,7 @@ function productsToDOM (productsJSON) {
 			household.innerHTML += `
 				<div class="products" >
 					<h3>${productName}</h3>
-					<h4 id="springDiscount--${productID}">${productPrice}</h4>
+					<h4 id="spring--${productID}">${productPrice}</h4>
 				</div>
 			`; 
 		}
@@ -126,7 +126,7 @@ function discountsPerSeason (event) {
 		furniturePriceArr.forEach(function (money, index) {
 			var adjustedPrice = money - (money * autumnDiscount);
 			adjustedPrice = adjustedPrice.toFixed(2);
-			var autumnId = document.getElementById(`autumnDiscount--${index}`)
+			var autumnId = document.getElementById(`autumn--${index}`);
 			autumnId.innerHTML = `<h4>${adjustedPrice}</h4>`;
 			//logic to print adjustPrice to DOM
 		});
@@ -136,7 +136,7 @@ function discountsPerSeason (event) {
 			apparelPriceArr.forEach(function (money, index) {
 				var adjustedPrice = money - (money * winterDiscount);
 				adjustedPrice = adjustedPrice.toFixed(2);
-				var winterId = document.getElementById(`winterDiscount--${index}`)
+				var winterId = document.getElementById(`winter--${index}`);
 				winterId.innerHTML = `<h4>${adjustedPrice}</h4>`;
 		});		
 	} else if (seasonToDiscount === "spring") {
@@ -145,7 +145,7 @@ function discountsPerSeason (event) {
 			householdPriceArr.forEach(function (money, index) {
 				var adjustedPrice = money - (money * springDiscount);
 				adjustedPrice = adjustedPrice.toFixed(2);
-				var springId = document.getElementById(`springDiscount--${index}`)
+				var springId = document.getElementById(`spring--${index}`);
 				springId.innerHTML = `<h4>${adjustedPrice}</h4>`;
 
 				//logic to print adjustPrice to DOM
